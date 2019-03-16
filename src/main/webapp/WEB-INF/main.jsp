@@ -3,15 +3,13 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <c:set var="backUrl" value="${pageContext.request.requestURL}"/>
-<fmt:setBundle basename="data"/>
-<body>
-<table valign="top">
+<fmt:setBundle basename="staticBundle"/>
+<table>
     <tr>
         <td valign="top"><c:import url="${page}"/></td>
         <td valign="top" align="right"></td>
+    </tr>
     <tr>
         <br/>
     </tr>
 </table>
-</body>
-</html>

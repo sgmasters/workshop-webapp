@@ -18,6 +18,14 @@ public class InMemoryTasksService implements TasksService {
                 .materialCosts("NOTHING")
                 .id("1")
                 .build());
+        tasks.add(new Task.Builder()
+                .name("second")
+                .price("23")
+                .runTime("1")
+                .complexity("MEDIUM")
+                .materialCosts("LOW")
+                .id("2")
+                .build());
     }
 
     private InMemoryTasksService() {

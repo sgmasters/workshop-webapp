@@ -2,26 +2,31 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
-<h2>Tasks</h2>
+<fmt:setBundle basename="staticBundle"/>
+<h2><fmt:message key="jsp.list.table.h2.tasks"/></h2>
 <table>
+    <tr>
+        <c:import url="/WEB-INF/domain/sort.jsp"/>
+        </br>
+    </tr>
     <tr style="text-transform: uppercase">
         <td>
-            <b><fmt:message key="name"/></b>
+            <b><fmt:message key="jsp.list.table.tr.td.name"/></b>
         </td>
         <td>
-            <b><fmt:message key="runTime"/></b>
+            <b><fmt:message key="jsp.list.table.tr.td.runTime"/></b>
         </td>
         <td>
-            <b><fmt:message key="price"/></b>
+            <b><fmt:message key="jsp.list.table.tr.td.price"/></b>
         </td>
         <td>
-            <b><fmt:message key="complexity"/></b>
+            <b><fmt:message key="jsp.list.table.tr.td.complexity"/></b>
         </td>
         <td>
-            <b><fmt:message key="materialCosts"/></b>
+            <b><fmt:message key="jsp.list.table.tr.td.materialCosts"/></b>
         </td>
         <td>
-            <b><fmt:message key="id"/></b>
+            <b><fmt:message key="jsp.list.table.tr.td.id"/></b>
         </td>
     </tr>
     <c:forEach var="task" items="${tasks}">
